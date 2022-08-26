@@ -1,0 +1,9 @@
+name: My Pipeline
+on: workflow_call
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    steps: 
+       - run: |
+          echo Hello, world!
+          echo Good Morning!!

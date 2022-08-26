@@ -1,0 +1,8 @@
+name: selfhosted runner
+on: workflow_call
+jobs:
+  job-1:
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+    - name: running on self hosted runner
+      run: echo job 1 running on ruuner !!

@@ -1,0 +1,6 @@
+name: Reusing workflows
+
+on: workflow_call
+jobs:
+  reusing_another_workflow:
+    uses: ./.github/workflows/workflow1.yml

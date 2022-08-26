@@ -1,0 +1,27 @@
+name: variables
+on: workflow_call
+
+env:
+  root_env_variable: Hi!! 🤝🏽
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    env:
+      job_env_variable: Good Morning 🔅
+    steps:
+      - name: "JOB 1"
+        run: echo "$root_env_variable $First_Name $Last_Name. $job_env_variable"
+        env:
+          First_Name: user 1
+          Last_Name: job 1
+
+  job2:
+    runs-on: ubuntu-latest
+    env:
+      Greeting: How are you!! 👋🏽
+    steps:
+      - name: "JOB 2"
+        run: echo "$root_env_variable $First_Name $Last_Name, $Greeting $job_env_variable"
+        env:
+          First_Name: user 2
